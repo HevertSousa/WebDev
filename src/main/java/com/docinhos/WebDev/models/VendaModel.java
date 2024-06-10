@@ -31,44 +31,27 @@ public class VendaModel implements Serializable {
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @OneToMany(mappedBy = "idProduto", fetch = FetchType.EAGER)
     private Set<ProdutoModel> produto = new HashSet<>();
-    /**
-     * @return UUID return the idVenda
-     */
+
     public UUID getIdVenda() {
         return idVenda;
     }
 
-    /**
-     * @param idVenda the idVenda to set
-     */
     public void setIdVenda(UUID idVenda) {
         this.idVenda = idVenda;
     }
 
-    /**
-     * @return float return the valor
-     */
     public float getValor() {
         return valor;
     }
 
-    /**
-     * @param valor the valor to set
-     */
     public void setValor(float valor) {
         this.valor = valor;
     }
 
-    /**
-     * @return Date return the dataVenda
-     */
     public Date getDataVenda() {
         return dataVenda;
     }
 
-    /**
-     * @param dataVenda the dataVenda to set
-     */
     public void setDataVenda(Date dataVenda) {
         this.dataVenda = dataVenda;
     }
